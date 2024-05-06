@@ -1,6 +1,8 @@
 <!DOCTYPE html>
     <head>
         <link rel="stylesheet" href="https://use.typekit.net/vew3pgc.css">
+        
+        <!-- CSS -->
         <style>
         .graydientR
         {
@@ -49,6 +51,15 @@
             text-shadow: 2px 2px #ED2DAA;
             margin-bottom: 0.3em;
         }
+        .h3
+        {
+            text-align: center;
+            font-family: dharma-gothic-e, sans-serif;
+            color: #FFD796;
+            text-shadow: 1px 1px #ED2DAA;
+            font-size: 200%; padding-bottom: 0.3em;
+            background: none;
+        }
         .paragraph
         {
             margin: auto;
@@ -60,23 +71,44 @@
             letter-spacing: 5px;
             width: 90%;
         }
+        .img {
+            display: block;
+            margin: auto;
+            padding-bottom: 2.5%;
+            width: 40%;
+        }
         .column {
         float: left;
         width: 50%;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content:target {
+            display: block;
         }
         .row::after {
         content: "";
         clear: both;
         display: table;
         padding: 1%;
-        } 
+        }
         </style>
+
     </head>
     <title>Connection Box</title>
     <body>
-        <div class="graydientR">
+        <button id="topButton" type="button" class="h3" onclick="document.location='#'" style="position:fixed; right:1rem; background-image: linear-gradient(to bottom left, #8b8a8a, #727272)">Back To Top</button>
+        <div class="graydientR" style="margin-top: -2%">
             <h1>Connection Box</h1>
-            <h3 style="text-align: center; font-family: dharma-gothic-e, sans-serif; color: #FFD796; text-shadow: 1px 1px #ED2DAA; font-size: 200%; padding-bottom: 0.3em;">Micah Fullinfaw - Hannah Gish - Lincoln Graham - Luke Davidson - Peter Schmit</h3>
+            <!-- <h3 class="h3">Micah Fullinfaw - Hannah Gish - Lincoln Graham - Luke Davidson - Peter Schmit</h3> -->
+            <div style="text-align: center; padding-top: 2%;">
+                <button type="button" class="h3" onclick="document.location='#Video'">Video</button>
+                <button type="button" class="h3" onclick="document.location='#Audio'">Audio</button>
+                <button type="button" class="h3" onclick="document.location='#GenPiece'">Generative Piece</button>
+                <button type="button" class="h3" onclick="document.location='#Photos'">Photos</button>
+                <button type="button" class="h3" onclick="document.location='#About'">About The Artists</button>
+            </div>
         </div>
         <div class="lightGraydientL">
             <div class="paragraph">
@@ -87,30 +119,31 @@
             </div>
         </div>
         <div class="lightGraydientR">
-            <h2>Video</h2>
+            <h2 id="Video">Video</h2>
         </div>
         <div class="lightGraydientL">
-            <h2>Audio</h2>
+            <h2 id="Audio">Audio</h2>
             <div class="row">
-                <div style="float:left; width:33.33%">
+                <div class="column"; style="width:33.33%">
                     <p class="paragraph" style="float:left; text-align: left; padding-bottom: 7.5%; font-size: 200%">Movement 1 - Meditation</p>
                     <audio controls src="Media/Binaural1.mp3" style="display:block; float:left"></audio>
                 </div>
-                <div style="float:left; width:33.33%">
-                    <p class="paragraph" style="margin:auto; text-align: center; padding-bottom: 7.5%; font-size: 200%">Movement 2 - Reflection</p>
+                <div class = "column"; style="width:33.33%">
+                    <p class="paragraph" style="text-align: center; padding-bottom: 7.5%; font-size: 200%">Movement 2 - Reflection</p>
                     <audio controls src="Media/Binaural2.mp3" style="display:block; margin:auto"></audio>
                 </div>
-                <div style="float:right; width:33.33%">
+                <div class = "column"; style="width:33.33%">
                     <p class="paragraph" style="float:right; text-align: right; padding-bottom: 7.5%; font-size: 200%">Movement 3 - Connection</p>
                     <audio controls src="Media/Binaural3.mp3" style="display:block; float:right"></audio>
                 </div>
             </div>
         </div>
-        <div class="lightGraydientR">
-            <h2>Generative Piece Sample</h2>
+        <div class="lightGraydientR" style="padding-bottom: 3%">
+            <h2 id="GenPiece">Generative Piece Sample</h2>
+            <iframe src="https://editor.p5js.org/hbagish/full/p4tG-PRxN" style="display:block; margin:auto; width:600px; height:600px"></iframe>
         </div>
         <div class="lightGraydientL">
-            <h2>Progress Photos</h2>
+            <h2 id="Photos">Progress Photos</h2>
             <div class="row">
                 <div class="column">
                     <img src="Media/conceptArt.png" style="width:99%; float:left">
@@ -136,8 +169,6 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="column">
-                        <img src="Media/wood.JPG" style="width:99%">
                     </div>
                     <div class="column">
                         <img src="Media/housingProgress1.JPG" style="width:99%">
@@ -152,6 +183,63 @@
                     </div>!-->
                 </div>
             </div>
+        </div>
+        <div class="lightGraydientR" style="padding-bottom: 3%;">
+            <h2 id="About" style="margin-bottom: 2%">About The Artists</h2>
+                <div class="row">
+                    <div class="column" style="width: 20%; text-align:center">
+                        <a href="#tab3" class="h3">Hannah</a>
+                    </div>
+                    <div class="column" style="width: 20%; text-align:center">
+                        <a href="#tab1" class="h3">Luke</a>
+                    </div>
+                    <div class="column" class="h3" style="width: 20%; text-align:center">
+                        <a href="#tab2" class="h3">Micah</a>
+                    </div>
+                    <div class="column" style="width: 20%; text-align:center">
+                        <a href="#tab4" class="h3">Lincoln</a>
+                    </div>
+                    <div class="column" style="width: 20%; text-align:center">
+                        <a href="#tab5" class="h3">Peter</a>
+                    </div>
+                </div>
+                <div style="background-color:rgb(197, 193, 193)">
+                    <div class="tab-content" id="tab3">
+                        <h2>Hannah</h3>
+                        <img src="Media/Hannah.JPG" class="img">
+                        <p class="paragraph">
+                            Hannah bio
+                        </p>
+                    </div>
+                    <div class="tab-content" id="tab1">
+                        <h2>Luke</h3>
+                        <img src="Media/Luke.JPG" class="img">
+                        <p class="paragraph">
+                            Tall. Brown hair. Berkenstocks. These are the words that best define Luke Davidson. In addition to helping design the structure, he aided in both the construction of the piece and in the production of electronic components. He also edited the video.
+                        </p>
+                    </div>
+                    <div class="tab-content" id="tab2">
+                        <h2>Micah</h3>
+                        <img src="Media/Micah.JPG" class="img">
+                        <p class="paragraph" style="padding:3%">
+                            A human inspired by human energy. Micah loves experiencing the gifts of different cultures around the world. His art often reflects this desire for an interconnected humanity. He also likes throwing rocks into lakes!
+                        </p>
+                    </div>
+                    <div class="tab-content" id="tab4">
+                        <h2>Lincoln</h3>
+                        <img src="Media/Lincoln.JPG" class="img">
+                        <p class="paragraph">
+                            Lincoln bio
+                        </p>
+                    </div>
+                    <div class="tab-content" id="tab5">
+                        <h2>Peter</h3>
+                        <img src="Media/Peter.JPG" class="img">
+                        <p class="paragraph">
+                            Multimedia artist, multi-instrumentalist and all-around geek. Has been meaning to reread Animorphs. Made the music for this installation, wrangled with the technical details, and made this website. Find more of his work at <a href="http://surrealducks.github.io">surrealducks.github.io</a>.
+                        </p>
+                    </div>
+                </div>
         </div>
     </body>
 </html>
